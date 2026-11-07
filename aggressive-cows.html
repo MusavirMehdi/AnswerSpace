@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#fbfaf7" />
+  <title>Aggressive Cows — AnswerSpace</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="aggressive-cows.css" />
+</head>
+<body>
+  <main class="page">
+  <header class="header"><a class="brand" href="index.html"><span class="brand-symbol">A<span>.</span></span> AnswerSpace <b>BY BS</b></a><div class="header-tools"><span class="problem-tag">BINARY SEARCH · AGGRESSIVE COWS</span><button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch to dark mode">◐</button></div></header>
+    <div class="lesson-layout">
+    <div class="visual-column">
+    <section class="animation-window" aria-label="Aggressive Cows animation">
+      <div class="animation-head"><div><span class="kicker">PLACE 3 COWS · 5 STALLS</span><h1>Aggressive Cows</h1><a class="problem-source-link" href="https://www.geeksforgeeks.org/problems/aggressive-cows/1" target="_blank" rel="noreferrer">GEEKSFORGEEKS PROBLEM ↗</a></div><span class="iteration" id="iteration">SETUP</span></div>
+      <div class="scene" id="scene-wrap">
+        <svg id="cows-scene" viewBox="0 0 1000 335" role="img" aria-label="Five numbered stalls at positions 1, 2, 4, 8, and 9"></svg>
+        <div class="scene-legend"><span><i class="legend-cow"></i> Cow placed</span><span><i class="legend-open"></i> Empty stall</span></div><span class="scale-note">STALLS · ORDERED, NOT TO SCALE</span>
+        <span class="source-credit">Cow icon: <a href="https://www.iconfinder.com/icons/7397903/cattle_cow_livestock_farm_ranch_icon" target="_blank" rel="noreferrer">Iconfinder</a></span>
+      </div>
+      <div class="array-block"><div class="array-title"><span>SEARCH DISTANCE</span><span id="array-caption">candidate minimum gaps</span></div><div class="array-cells" id="array-cells" aria-label="Candidate minimum distances"></div></div>
+      <div class="bounds"><span class="bound-start">START <b id="start-value">1</b></span><div class="bound-line"><i id="start-marker"></i><i id="end-marker"></i><i id="mid-marker"></i></div><span class="bound-end">END <b id="end-value">8</b></span></div>
+    </section>
+    <section class="decision-window" aria-label="Current binary search decision">
+      <div class="decision-copy"><span class="decision-step" id="decision-step">START</span><div class="decision-messages"><p id="decision-text">Find the largest minimum distance for 3 cows.</p><div class="reason" id="reason" hidden><span>WHY THESE BOUNDS</span><p id="reason-text"></p></div></div></div>
+      <div class="controls"><button id="back" class="control secondary" aria-label="Previous step">←</button><button id="play" class="control play"><span id="play-icon">▶</span><span id="play-label">Play</span></button><button id="next" class="control secondary" aria-label="Next step">→</button><button id="reset" class="control secondary reset" aria-label="Reset">↺</button></div>
+    </section>
+    </div>
+    <aside class="input-panel examples-panel" aria-labelledby="examples-title">
+      <span class="kicker">READY-MADE CASES</span><h2 id="examples-title">Choose an example</h2><p class="input-help">Each pasture has its own complete binary-search walkthrough.</p>
+      <div class="example-options" role="group" aria-label="Aggressive Cows examples">
+        <button class="example-option selected" type="button" data-example="sample" aria-pressed="true"><span class="example-heading"><i>01</i><strong>Sample pasture</strong></span><span class="example-array">1, 2, 4, 8, 9</span><span class="example-detail">3 cows <b>·</b> answer <strong>3</strong></span></button>
+        <button class="example-option" type="button" data-example="wide" aria-pressed="false"><span class="example-heading"><i>02</i><strong>Wide pasture</strong></span><span class="example-array">0, 6, 12, 18, 24</span><span class="example-detail">3 cows <b>·</b> answer <strong>12</strong></span></button>
+        <button class="example-option" type="button" data-example="pair" aria-pressed="false"><span class="example-heading"><i>03</i><strong>Two cows, far apart</strong></span><span class="example-array">2, 5, 11, 18</span><span class="example-detail">2 cows <b>·</b> answer <strong>16</strong></span></button>
+      </div>
+      <div class="input-note"><span>↳</span><span id="example-note">Watch the search rule out 4 and settle on a best gap of 3.</span></div>
+    </aside>
+    </div>
+    <footer><a href="index.html">ANSWERSPACE BY BS</a><span>AGGRESSIVE COWS · BINARY SEARCH · MAXIMIZE THE MINIMUM <i>✳</i></span></footer>
+  </main>
+  <script src="theme.js"></script>
+  <script src="aggressive-cows.js"></script>
+</body>
+</html>

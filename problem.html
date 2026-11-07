@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#fbfaf7" />
+  <title>AnswerSpace — Problem Walkthrough</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="problem-page.css" />
+</head>
+<body>
+  <main class="problem-shell" id="problem-shell">
+    <header class="header"><a class="brand" href="index.html"><span class="brand-symbol">A<span>.</span></span> AnswerSpace <b>BY BS</b></a><div class="header-tools"><a class="back-link" href="index.html">ALL PROBLEMS</a><button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch to dark mode">◐</button></div></header>
+    <section class="problem-intro"><div class="kicker" id="problem-category">BINARY SEARCH ON ANSWER</div><h1 id="problem-title">Problem</h1><p id="problem-description"></p><a class="source-link" id="problem-source" target="_blank" rel="noreferrer">ORIGINAL PROBLEM ↗</a></section>
+    <div class="lesson-layout">
+      <div class="visual-column">
+        <section class="animation-window" aria-label="Problem animation">
+          <div class="animation-head"><div><span class="kicker" id="scenario-label"></span><h2 id="scene-title"></h2></div><span class="iteration" id="iteration">SETUP</span></div>
+          <div class="scene"><svg id="story-scene" viewBox="0 0 1000 340" role="img" aria-label="Animated problem illustration"></svg><span class="scale-note" id="scene-note"></span></div>
+          <div class="array-block"><div class="array-title"><span id="range-label">SEARCH RANGE</span><span id="array-caption"></span></div><div class="array-cells" id="array-cells" aria-label="Binary search candidates"></div></div>
+          <div class="bounds"><span class="bound-start">LOW <b id="low-value">—</b></span><div class="bound-line"><i id="low-marker"></i><i id="high-marker"></i><i id="mid-marker"></i></div><span class="bound-end">HIGH <b id="high-value">—</b></span></div>
+        </section>
+        <section class="decision-window" aria-label="Current binary search step">
+          <div class="decision-copy"><span class="decision-step" id="decision-step">BOUNDS</span><div class="decision-messages"><p id="decision-text"></p><div class="reason" id="decision-reason"><span>WHY THIS CHECK</span><p id="reason-text"></p></div></div></div>
+          <div class="controls"><button id="back" class="control secondary" aria-label="Previous step">←</button><button id="play" class="control play"><span id="play-icon">▶</span><span id="play-label">Play</span></button><button id="next" class="control secondary" aria-label="Next step">→</button><button id="reset" class="control secondary reset" aria-label="Reset">↺</button></div>
+        </section>
+      </div>
+      <aside class="example-panel" aria-labelledby="examples-title"><span class="kicker">TRY A TEST CASE</span><h2 id="examples-title">Examples</h2><p class="input-help">Choose a case to replay its full search.</p><div class="example-options" id="example-options" role="group" aria-label="Problem examples"></div><div class="input-note"><span>↳</span><span id="example-note"></span></div></aside>
+    </div>
+    <footer><a href="index.html">ANSWERSPACE BY BS</a><span id="footer-note">BINARY SEARCH · ONE GUESS AT A TIME</span></footer>
+  </main>
+  <script src="theme.js"></script>
+  <script src="problem-engine.js"></script>
+</body>
+</html>
